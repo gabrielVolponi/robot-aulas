@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-06-24T11:49:23.917239" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Aulas" source="C:\robot-aulas">
+<suite id="s1-s1" name="Test" source="C:\robot-aulas\test">
+<suite id="s1-s1-s1" name="Specs" source="C:\robot-aulas\test\specs">
+<suite id="s1-s1-s1-s1" name="Login" source="C:\robot-aulas\test\specs\login.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenario 001: Logar com credenciais invalidas" line="15">
+<kw name="Abrir navegador" owner="gerais" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:24.203301" level="INFO">Opening browser 'Chrome' to base url 'https://sistema-h-pesquisador.vidibr.net/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-24T11:49:24.203112" elapsed="1.363003"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.566409" elapsed="0.040542"/>
+</kw>
+<arg>${urlSistema}</arg>
+<status status="PASS" start="2025-06-24T11:49:24.202597" elapsed="1.404466"/>
+</kw>
+<kw name="Logar com credenciais" owner="login">
+<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.608564" elapsed="0.026238"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.608275" elapsed="0.026659"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:25.635501" level="INFO">Typing text 'teste@gmail.com' into text field '//input[@id='floatingInput']'.</msg>
+<arg>${elemento}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.635213" elapsed="0.161402"/>
+</kw>
+<arg>${input_email_login}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.607962" elapsed="0.188781"/>
+</kw>
+<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.797507" elapsed="0.018494"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.797340" elapsed="0.018756"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:25.816409" level="INFO">Typing text 'senha' into text field '//input[@id='floatingPassword']'.</msg>
+<arg>${elemento}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.816212" elapsed="0.070591"/>
+</kw>
+<arg>${input_senha_login}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.797071" elapsed="0.089844"/>
+</kw>
+<kw name="Esperar elemento visivel e clica nele" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.887495" elapsed="0.013299"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.887326" elapsed="0.013557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:25.901169" level="INFO">Clicking element '//button[@data-cy='Entrar']'.</msg>
+<arg>${elemento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.900992" elapsed="0.048348"/>
+</kw>
+<arg>${btn_entrar}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.887066" elapsed="0.062387"/>
+</kw>
+<arg>teste@gmail.com</arg>
+<arg>senha</arg>
+<status status="PASS" start="2025-06-24T11:49:25.607537" elapsed="0.341987"/>
+</kw>
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:25.950228" elapsed="0.220771"/>
+</kw>
+<arg>${li_mensagem_de_erro}</arg>
+<status status="PASS" start="2025-06-24T11:49:25.949922" elapsed="0.221164"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:26.171546" level="INFO">Verifying element '//div//ul//li' contains exact text 'Não foi possível realizar o login. Por favor verifique o e-mail e senha e tente novamente.'.</msg>
+<arg>${li_mensagem_de_erro}</arg>
+<arg>${msg_erro_login_invalido}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-24T11:49:26.171339" elapsed="0.014378"/>
+</kw>
+<kw name="Fechar navegador" owner="gerais" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:26.279420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-24T11:49:26.186331" elapsed="0.093245"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-24T11:49:26.279803" elapsed="2.164298"/>
+</kw>
+<status status="PASS" start="2025-06-24T11:49:26.186114" elapsed="2.258088"/>
+</kw>
+<tag>login_completo</tag>
+<tag>login_invalido</tag>
+<status status="PASS" start="2025-06-24T11:49:24.201940" elapsed="4.242504"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Cenario 002: Logar com credenciais validas" line="25">
+<kw name="Abrir navegador" owner="gerais" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:28.446169" level="INFO">Opening browser 'Chrome' to base url 'https://sistema-h-pesquisador.vidibr.net/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-24T11:49:28.445964" elapsed="1.427039"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-24T11:49:29.873217" elapsed="0.043956"/>
+</kw>
+<arg>${urlSistema}</arg>
+<status status="PASS" start="2025-06-24T11:49:28.445739" elapsed="1.471526"/>
+</kw>
+<kw name="Logar com credenciais" owner="login">
+<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:29.918397" elapsed="0.019644"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:29.918204" elapsed="0.019928"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:29.938449" level="INFO">Typing text 'gabriel.volponi@vidibr.com' into text field '//input[@id='floatingInput']'.</msg>
+<arg>${elemento}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:29.938245" elapsed="0.140067"/>
+</kw>
+<arg>${input_email_login}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-06-24T11:49:29.918009" elapsed="0.160405"/>
+</kw>
+<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:30.079306" elapsed="0.014999"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:30.079123" elapsed="0.015280"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:30.094731" level="INFO">Typing text 'Gibton@23' into text field '//input[@id='floatingPassword']'.</msg>
+<arg>${elemento}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:30.094521" elapsed="0.097865"/>
+</kw>
+<arg>${input_senha_login}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2025-06-24T11:49:30.078571" elapsed="0.113927"/>
+</kw>
+<kw name="Esperar elemento visivel e clica nele" owner="gerais">
+<kw name="Esperar elemento visivel" owner="gerais">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${elemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T11:49:30.193059" elapsed="0.012674"/>
+</kw>
+<arg>${elemento}</arg>
+<status status="PASS" start="2025-06-24T11:49:30.192885" elapsed="0.012993"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:30.206196" level="INFO">Clicking element '//button[@data-cy='Entrar']'.</msg>
+<arg>${elemento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T11:49:30.206008" elapsed="0.046936"/>
+</kw>
+<arg>${btn_entrar}</arg>
+<status status="PASS" start="2025-06-24T11:49:30.192646" elapsed="0.060393"/>
+</kw>
+<arg>${userSistema}</arg>
+<arg>${senhaSistema}</arg>
+<status status="PASS" start="2025-06-24T11:49:29.917692" elapsed="0.335401"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/Account/EscolherArea</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-06-24T11:49:30.253334" elapsed="0.944370"/>
+</kw>
+<kw name="Fechar navegador" owner="gerais" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-24T11:49:31.307634" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-24T11:49:31.198399" elapsed="0.109349"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-24T11:49:31.307894" elapsed="2.153918"/>
+</kw>
+<status status="PASS" start="2025-06-24T11:49:31.198162" elapsed="2.263759"/>
+</kw>
+<tag>login_completo</tag>
+<tag>login_valido</tag>
+<status status="PASS" start="2025-06-24T11:49:28.445245" elapsed="5.016861"/>
+</test>
+<doc>Essa spec e para realizar testes no login da vidi</doc>
+<status status="PASS" start="2025-06-24T11:49:23.943560" elapsed="9.519253"/>
+</suite>
+<status status="PASS" start="2025-06-24T11:49:23.942371" elapsed="9.521169"/>
+</suite>
+<status status="PASS" start="2025-06-24T11:49:23.941295" elapsed="9.522751"/>
+</suite>
+<status status="PASS" start="2025-06-24T11:49:23.918538" elapsed="9.545907"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login_completo</stat>
+<stat pass="1" fail="0" skip="0">login_invalido</stat>
+<stat pass="1" fail="0" skip="0">login_valido</stat>
+</tag>
+<suite>
+<stat name="Robot-Aulas" id="s1" pass="2" fail="0" skip="0">Robot-Aulas</stat>
+<stat name="Test" id="s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test</stat>
+<stat name="Specs" id="s1-s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test.Specs</stat>
+<stat name="Login" id="s1-s1-s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test.Specs.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
