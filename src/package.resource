@@ -18,3 +18,4 @@ Resource    users.resource
 
 *** Variables ***
 ${urlSistema}    https://sistema-h-pesquisador.vidibr.net/
+${urlPlanejamentoFinanceiro}    https://save-your-money-nine.vercel.app/
