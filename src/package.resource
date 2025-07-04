@@ -5,6 +5,7 @@ Documentation    Esse arquivo será utilizado para armazenar todos recursos nece
 
 #Libs
 Library    SeleniumLibrary
+Library    RequestsLibrary
 
 #Keywords
 Resource    ../test/keywords/allKeywords.resource

@@ -1,249 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-06-24T11:49:23.917239" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-04T12:00:14.263851" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot-Aulas" source="C:\robot-aulas">
 <suite id="s1-s1" name="Test" source="C:\robot-aulas\test">
 <suite id="s1-s1-s1" name="Specs" source="C:\robot-aulas\test\specs">
-<suite id="s1-s1-s1-s1" name="Login" source="C:\robot-aulas\test\specs\login.robot">
-<test id="s1-s1-s1-s1-t1" name="Cenario 001: Logar com credenciais invalidas" line="15">
-<kw name="Abrir navegador" owner="gerais" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:24.203301" level="INFO">Opening browser 'Chrome' to base url 'https://sistema-h-pesquisador.vidibr.net/'.</msg>
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-24T11:49:24.203112" elapsed="1.363003"/>
+<suite id="s1-s1-s1-s1" name="testesApi" source="C:\robot-aulas\test\specs\testesApi.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenario 001: GET products" line="12">
+<kw name="Pegar todos produtos cadastrados na loja" owner="api">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-07-04T12:00:15.689083" level="INFO">GET Request : url=https://fakestoreapi.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-07-04T12:00:15.689247" level="INFO">GET Response : url=https://fakestoreapi.com/products 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 04 Jul 2025 15:00:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"297c-h+n6NsR3M51S6528jZo3BluzvtU"', 'X-Powered-By': 'Express', 'Cf-Cache-Status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=GOqQ9YAbW0rpHJOtzgLEnsCmvrP94Crb0jVpoaBnBA9F7y%2FLyxsL4hSu3etqS7g02pVU4YntytwtAhTG771Az7YIM%2BL2RQGpudZPFozSC3c%3D"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '959f7dbf6fafe2b3-GIG', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday","category":"men's clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","rating":{"rate":3.9,"count":120}},{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.","category":"men's clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","rating":{"rate":4.1,"count":259}},{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men's clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg","rating":{"rate":4.7,"count":500}},{"id":4,"title":"Mens Casual Slim Fit","price":15.99,"description":"The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.","category":"men's clothing","image":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg","rating":{"rate":2.1,"count":430}},{"id":5,"title":"John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet","price":695,"description":"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":4.6,"count":400}},{"id":6,"title":"Solid Gold Petite Micropave ","price":168,"description":"Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.","category":"jewelery","image":"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":3.9,"count":70}},{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":3,"count":400}},{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":1.9,"count":100}},{"id":9,"title":"WD 2TB Elements Portable External Hard Drive - USB 3.0 ","price":64,"description":"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system","category":"electronics","image":"https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg","rating":{"rate":3.3,"count":203}},{"id":10,"title":"SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s","price":109,"description":"Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)","category":"electronics","image":"https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg","rating":{"rate":2.9,"count":470}},{"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg","rating":{"rate":4.8,"count":319}},{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive","price":114,"description":"Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg","rating":{"rate":4.8,"count":400}},{"id":13,"title":"Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin","price":599,"description":"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz","category":"electronics","image":"https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg","rating":{"rate":2.9,"count":250}},{"id":14,"title":"Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ","price":999.99,"description":"49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag","category":"electronics","image":"https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg","rating":{"rate":2.2,"count":140}},{"id":15,"title":"BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats","price":56.99,"description":"Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates","category":"women's clothing","image":"https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg","rating":{"rate":2.6,"count":235}},{"id":16,"title":"Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket","price":29.95,"description":"100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON","category":"women's clothing","image":"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg","rating":{"rate":2.9,"count":340}},{"id":17,"title":"Rain Jacket Women Windbreaker Striped Climbing Raincoats","price":39.99,"description":"Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.","category":"women's clothing","image":"https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg","rating":{"rate":3.8,"count":679}},{"id":18,"title":"MBJ Women's Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem","category":"women's clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg","rating":{"rate":4.7,"count":130}},{"id":19,"title":"Opna Women's Short Sleeve Moisture","price":7.95,"description":"100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2025-07-04T12:00:15.689721" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>https://fakestoreapi.com/products</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-07-04T12:00:14.811180" elapsed="0.878574"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.566409" elapsed="0.040542"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.690587" level="INFO">${produtos} = [{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 in...</msg>
+<var>${produtos}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.689934" elapsed="0.000686"/>
 </kw>
-<arg>${urlSistema}</arg>
-<status status="PASS" start="2025-06-24T11:49:24.202597" elapsed="1.404466"/>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.691259" level="INFO">${preco} = 109.95</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.690922" elapsed="0.000358"/>
 </kw>
-<kw name="Logar com credenciais" owner="login">
-<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.608564" elapsed="0.026238"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.691367" elapsed="0.000455"/>
 </kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.608275" elapsed="0.026659"/>
+<var name="${produto}">{'id': 1, 'title': 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 'price': 109.95, 'description': 'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inc...</var>
+<status status="PASS" start="2025-07-04T12:00:15.690832" elapsed="0.001044"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.692399" level="INFO">${preco} = 22.3</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.692069" elapsed="0.000352"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:25.635501" level="INFO">Typing text 'teste@gmail.com' into text field '//input[@id='floatingInput']'.</msg>
-<arg>${elemento}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.635213" elapsed="0.161402"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.692505" elapsed="0.000260"/>
 </kw>
-<arg>${input_email_login}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.607962" elapsed="0.188781"/>
+<var name="${produto}">{'id': 2, 'title': 'Mens Casual Premium Slim Fit T-Shirts ', 'price': 22.3, 'description': 'Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for...</var>
+<status status="PASS" start="2025-07-04T12:00:15.691987" elapsed="0.000835"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.693295" level="INFO">${preco} = 55.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.692987" elapsed="0.000328"/>
 </kw>
-<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.797507" elapsed="0.018494"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.693390" elapsed="0.000240"/>
 </kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.797340" elapsed="0.018756"/>
+<var name="${produto}">{'id': 3, 'title': 'Mens Cotton Jacket', 'price': 55.99, 'description': 'great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock ...</var>
+<status status="PASS" start="2025-07-04T12:00:15.692919" elapsed="0.000760"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.694145" level="INFO">${preco} = 15.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.693834" elapsed="0.000330"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:25.816409" level="INFO">Typing text 'senha' into text field '//input[@id='floatingPassword']'.</msg>
-<arg>${elemento}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.816212" elapsed="0.070591"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.694239" elapsed="0.000310"/>
 </kw>
-<arg>${input_senha_login}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.797071" elapsed="0.089844"/>
+<var name="${produto}">{'id': 4, 'title': 'Mens Casual Slim Fit', 'price': 15.99, 'description': 'The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, t...</var>
+<status status="PASS" start="2025-07-04T12:00:15.693766" elapsed="0.000886"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.695128" level="INFO">${preco} = 695</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.694818" elapsed="0.000330"/>
 </kw>
-<kw name="Esperar elemento visivel e clica nele" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.887495" elapsed="0.013299"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.695223" elapsed="0.000310"/>
 </kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.887326" elapsed="0.013557"/>
+<var name="${produto}">{'id': 5, 'title': "John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet", 'price': 695, 'description': "From our Legends Collection, the Naga was inspired by the mythical water...</var>
+<status status="PASS" start="2025-07-04T12:00:15.694742" elapsed="0.000856"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.696090" level="INFO">${preco} = 168</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.695763" elapsed="0.000349"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:25.901169" level="INFO">Clicking element '//button[@data-cy='Entrar']'.</msg>
-<arg>${elemento}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.900992" elapsed="0.048348"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.696189" elapsed="0.000184"/>
 </kw>
-<arg>${btn_entrar}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.887066" elapsed="0.062387"/>
+<var name="${produto}">{'id': 6, 'title': 'Solid Gold Petite Micropave ', 'price': 168, 'description': 'Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United S...</var>
+<status status="PASS" start="2025-07-04T12:00:15.695694" elapsed="0.000727"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.696929" level="INFO">${preco} = 9.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.696617" elapsed="0.000332"/>
 </kw>
-<arg>teste@gmail.com</arg>
-<arg>senha</arg>
-<status status="PASS" start="2025-06-24T11:49:25.607537" elapsed="0.341987"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.697031" elapsed="0.000234"/>
 </kw>
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:25.950228" elapsed="0.220771"/>
+<var name="${produto}">{'id': 7, 'title': 'White Gold Plated Princess', 'price': 9.99, 'description': "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement,...</var>
+<status status="PASS" start="2025-07-04T12:00:15.696515" elapsed="0.000785"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.697713" level="INFO">${preco} = 10.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.697427" elapsed="0.000304"/>
 </kw>
-<arg>${li_mensagem_de_erro}</arg>
-<status status="PASS" start="2025-06-24T11:49:25.949922" elapsed="0.221164"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.697797" elapsed="0.000216"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:26.171546" level="INFO">Verifying element '//div//ul//li' contains exact text 'Não foi possível realizar o login. Por favor verifique o e-mail e senha e tente novamente.'.</msg>
-<arg>${li_mensagem_de_erro}</arg>
-<arg>${msg_erro_login_invalido}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-06-24T11:49:26.171339" elapsed="0.014378"/>
+<var name="${produto}">{'id': 8, 'title': 'Pierced Owl Rose Gold Plated Stainless Steel Double', 'price': 10.99, 'description': 'Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel', 'category'...</var>
+<status status="PASS" start="2025-07-04T12:00:15.697370" elapsed="0.000675"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.698444" level="INFO">${preco} = 64</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.698177" elapsed="0.000287"/>
 </kw>
-<kw name="Fechar navegador" owner="gerais" type="TEARDOWN">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:26.279420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-24T11:49:26.186331" elapsed="0.093245"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.698533" elapsed="0.000287"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-06-24T11:49:26.279803" elapsed="2.164298"/>
+<var name="${produto}">{'id': 9, 'title': 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ', 'price': 64, 'description': 'USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; C...</var>
+<status status="PASS" start="2025-07-04T12:00:15.698113" elapsed="0.000742"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.699284" level="INFO">${preco} = 109</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.698997" elapsed="0.000305"/>
 </kw>
-<status status="PASS" start="2025-06-24T11:49:26.186114" elapsed="2.258088"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.699367" elapsed="0.000214"/>
 </kw>
+<var name="${produto}">{'id': 10, 'title': 'SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s', 'price': 109, 'description': 'Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 R...</var>
+<status status="PASS" start="2025-07-04T12:00:15.698937" elapsed="0.000675"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.700034" level="INFO">${preco} = 109</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.699741" elapsed="0.000314"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.700123" elapsed="0.000165"/>
+</kw>
+<var name="${produto}">{'id': 11, 'title': 'Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5', 'price': 109, 'description': '3D NAND flash are applied to deliver high transfer speeds Remarkable t...</var>
+<status status="PASS" start="2025-07-04T12:00:15.699678" elapsed="0.000643"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.700704" level="INFO">${preco} = 114</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.700443" elapsed="0.000278"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.700784" elapsed="0.000214"/>
+</kw>
+<var name="${produto}">{'id': 12, 'title': 'WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive', 'price': 114, 'description': "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sle...</var>
+<status status="PASS" start="2025-07-04T12:00:15.700388" elapsed="0.000646"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.701469" level="INFO">${preco} = 599</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.701181" elapsed="0.000306"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.701557" elapsed="0.000249"/>
+</kw>
+<var name="${produto}">{'id': 13, 'title': 'Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin', 'price': 599, 'description': '21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync tech...</var>
+<status status="PASS" start="2025-07-04T12:00:15.701110" elapsed="0.000757"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.702391" level="INFO">${preco} = 999.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.702027" elapsed="0.000389"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.702505" elapsed="0.000315"/>
+</kw>
+<var name="${produto}">{'id': 14, 'title': 'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ', 'price': 999.99, 'description': '49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MON...</var>
+<status status="PASS" start="2025-07-04T12:00:15.701959" elapsed="0.000912"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.703394" level="INFO">${preco} = 56.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.703042" elapsed="0.000373"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.703495" elapsed="0.000346"/>
+</kw>
+<var name="${produto}">{'id': 15, 'title': "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats", 'price': 56.99, 'description': 'Note:The Jackets is US standard size, Please choose size as your usual wear Material: 10...</var>
+<status status="PASS" start="2025-07-04T12:00:15.702970" elapsed="0.000922"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.704362" level="INFO">${preco} = 29.95</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.704054" elapsed="0.000327"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.704455" elapsed="0.000328"/>
+</kw>
+<var name="${produto}">{'id': 16, 'title': "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket", 'price': 29.95, 'description': '100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (S...</var>
+<status status="PASS" start="2025-07-04T12:00:15.703985" elapsed="0.000846"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.705388" level="INFO">${preco} = 39.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.704978" elapsed="0.000442"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.705534" elapsed="0.000226"/>
+</kw>
+<var name="${produto}">{'id': 17, 'title': 'Rain Jacket Women Windbreaker Striped Climbing Raincoats', 'price': 39.99, 'description': "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstr...</var>
+<status status="PASS" start="2025-07-04T12:00:15.704912" elapsed="0.000902"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.706536" level="INFO">${preco} = 9.85</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.706010" elapsed="0.000555"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.706678" elapsed="0.000339"/>
+</kw>
+<var name="${produto}">{'id': 18, 'title': "MBJ Women's Solid Short Sleeve Boat Neck V ", 'price': 9.85, 'description': '95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch fo...</var>
+<status status="PASS" start="2025-07-04T12:00:15.705931" elapsed="0.001151"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.708845" level="INFO">${preco} = 7.95</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.707366" elapsed="0.001506"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.708972" elapsed="0.000302"/>
+</kw>
+<var name="${produto}">{'id': 19, 'title': "Opna Women's Short Sleeve Moisture", 'price': 7.95, 'description': '100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lig...</var>
+<status status="PASS" start="2025-07-04T12:00:15.707287" elapsed="0.002042"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-04T12:00:15.709970" level="INFO">${preco} = 12.99</msg>
+<var>${preco}</var>
+<arg>${produto['price']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.709506" elapsed="0.000506"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-04T12:00:15.710134" elapsed="0.000300"/>
+</kw>
+<var name="${produto}">{'id': 20, 'title': 'DANVOUY Womens T Shirt Casual Cotton Short', 'price': 12.99, 'description': '95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is s...</var>
+<status status="PASS" start="2025-07-04T12:00:15.709429" elapsed="0.001061"/>
+</iter>
+<var>${produto}</var>
+<value>@{produtos}</value>
+<status status="PASS" start="2025-07-04T12:00:15.690695" elapsed="0.019836"/>
+</for>
+<status status="PASS" start="2025-07-04T12:00:14.810293" elapsed="0.900326"/>
+</kw>
+<tag>get_products</tag>
 <tag>login_completo</tag>
-<tag>login_invalido</tag>
-<status status="PASS" start="2025-06-24T11:49:24.201940" elapsed="4.242504"/>
+<status status="PASS" start="2025-07-04T12:00:14.809546" elapsed="0.901339"/>
 </test>
-<test id="s1-s1-s1-s1-t2" name="Cenario 002: Logar com credenciais validas" line="25">
-<kw name="Abrir navegador" owner="gerais" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:28.446169" level="INFO">Opening browser 'Chrome' to base url 'https://sistema-h-pesquisador.vidibr.net/'.</msg>
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-24T11:49:28.445964" elapsed="1.427039"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-24T11:49:29.873217" elapsed="0.043956"/>
-</kw>
-<arg>${urlSistema}</arg>
-<status status="PASS" start="2025-06-24T11:49:28.445739" elapsed="1.471526"/>
-</kw>
-<kw name="Logar com credenciais" owner="login">
-<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:29.918397" elapsed="0.019644"/>
-</kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:29.918204" elapsed="0.019928"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:29.938449" level="INFO">Typing text 'gabriel.volponi@vidibr.com' into text field '//input[@id='floatingInput']'.</msg>
-<arg>${elemento}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:29.938245" elapsed="0.140067"/>
-</kw>
-<arg>${input_email_login}</arg>
-<arg>${email}</arg>
-<status status="PASS" start="2025-06-24T11:49:29.918009" elapsed="0.160405"/>
-</kw>
-<kw name="Esperar elemento visivel e digitar um texto" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:30.079306" elapsed="0.014999"/>
-</kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:30.079123" elapsed="0.015280"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:30.094731" level="INFO">Typing text 'Gibton@23' into text field '//input[@id='floatingPassword']'.</msg>
-<arg>${elemento}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:30.094521" elapsed="0.097865"/>
-</kw>
-<arg>${input_senha_login}</arg>
-<arg>${senha}</arg>
-<status status="PASS" start="2025-06-24T11:49:30.078571" elapsed="0.113927"/>
-</kw>
-<kw name="Esperar elemento visivel e clica nele" owner="gerais">
-<kw name="Esperar elemento visivel" owner="gerais">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${elemento}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-24T11:49:30.193059" elapsed="0.012674"/>
-</kw>
-<arg>${elemento}</arg>
-<status status="PASS" start="2025-06-24T11:49:30.192885" elapsed="0.012993"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:30.206196" level="INFO">Clicking element '//button[@data-cy='Entrar']'.</msg>
-<arg>${elemento}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-24T11:49:30.206008" elapsed="0.046936"/>
-</kw>
-<arg>${btn_entrar}</arg>
-<status status="PASS" start="2025-06-24T11:49:30.192646" elapsed="0.060393"/>
-</kw>
-<arg>${userSistema}</arg>
-<arg>${senhaSistema}</arg>
-<status status="PASS" start="2025-06-24T11:49:29.917692" elapsed="0.335401"/>
-</kw>
-<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
-<arg>/Account/EscolherArea</arg>
-<doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2025-06-24T11:49:30.253334" elapsed="0.944370"/>
-</kw>
-<kw name="Fechar navegador" owner="gerais" type="TEARDOWN">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-24T11:49:31.307634" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-24T11:49:31.198399" elapsed="0.109349"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-06-24T11:49:31.307894" elapsed="2.153918"/>
-</kw>
-<status status="PASS" start="2025-06-24T11:49:31.198162" elapsed="2.263759"/>
-</kw>
-<tag>login_completo</tag>
-<tag>login_valido</tag>
-<status status="PASS" start="2025-06-24T11:49:28.445245" elapsed="5.016861"/>
-</test>
-<doc>Essa spec e para realizar testes no login da vidi</doc>
-<status status="PASS" start="2025-06-24T11:49:23.943560" elapsed="9.519253"/>
+<doc>Essa spec e para realizar testes na API fake store</doc>
+<status status="PASS" start="2025-07-04T12:00:14.293208" elapsed="1.418758"/>
 </suite>
-<status status="PASS" start="2025-06-24T11:49:23.942371" elapsed="9.521169"/>
+<status status="PASS" start="2025-07-04T12:00:14.291430" elapsed="1.421527"/>
 </suite>
-<status status="PASS" start="2025-06-24T11:49:23.941295" elapsed="9.522751"/>
+<status status="PASS" start="2025-07-04T12:00:14.289950" elapsed="1.423966"/>
 </suite>
-<status status="PASS" start="2025-06-24T11:49:23.918538" elapsed="9.545907"/>
+<status status="PASS" start="2025-07-04T12:00:14.265001" elapsed="1.449719"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">login_completo</stat>
-<stat pass="1" fail="0" skip="0">login_invalido</stat>
-<stat pass="1" fail="0" skip="0">login_valido</stat>
+<stat pass="1" fail="0" skip="0">get_products</stat>
+<stat pass="1" fail="0" skip="0">login_completo</stat>
 </tag>
 <suite>
-<stat name="Robot-Aulas" id="s1" pass="2" fail="0" skip="0">Robot-Aulas</stat>
-<stat name="Test" id="s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test</stat>
-<stat name="Specs" id="s1-s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test.Specs</stat>
-<stat name="Login" id="s1-s1-s1-s1" pass="2" fail="0" skip="0">Robot-Aulas.Test.Specs.Login</stat>
+<stat name="Robot-Aulas" id="s1" pass="1" fail="0" skip="0">Robot-Aulas</stat>
+<stat name="Test" id="s1-s1" pass="1" fail="0" skip="0">Robot-Aulas.Test</stat>
+<stat name="Specs" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot-Aulas.Test.Specs</stat>
+<stat name="testesApi" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Robot-Aulas.Test.Specs.testesApi</stat>
 </suite>
 </statistics>
 <errors>
